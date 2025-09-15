@@ -19,10 +19,10 @@ model = load_model()
 # -------------------------
 st.markdown("""
     <style>
-    /* App overall background */
+    /* App overall background with light gradient */
     .stApp {
-        background: linear-gradient(135deg, #667eea, #764ba2);
-        color: #ffffff;
+        background: linear-gradient(135deg, #e0f7fa, #e1bee7);
+        color: #333333;
         font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
@@ -31,38 +31,38 @@ st.markdown("""
         background-color: rgba(255, 255, 255, 0.95);
         padding: 2rem;
         border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
 
     /* Header text styling */
     h1 {
-        color: White !important;
+        color: #4a148c !important;
         font-size: 36px;
         font-weight: 700;
     }
 
     /* Subheader styling */
     .stMarkdown p {
-        color: White !important;
+        color: #4a148c !important;
         font-size: 18px;
     }
 
     /* Input fields styling */
     .stNumberInput>div>div>input {
-        border: 2px solid #4a148c;
+        border: 2px solid #ce93d8;
         border-radius: 12px;
         padding: 0.6rem;
         font-size: 16px;
     }
     .stNumberInput>label {
         font-weight: 500;
-        color: White !important;
+        color: #4a148c !important;
     }
 
-    /* Button styling */
+    /* Button styling with light gradient */
     .stButton button {
-        background: linear-gradient(45deg, #ff6ec4, #7873f5);
-        color: black;
+        background: linear-gradient(45deg, #ffe082, #b39ddb);
+        color: #333333;
         border: none;
         padding: 0.8rem 1.8rem;
         font-size: 18px;
@@ -72,7 +72,7 @@ st.markdown("""
         transition: all 0.3s ease;
     }
     .stButton button:hover {
-        background: linear-gradient(45deg, #7873f5, #ff6ec4);
+        background: linear-gradient(45deg, #b39ddb, #ffe082);
         transform: scale(1.05);
     }
 
@@ -85,6 +85,7 @@ st.markdown("""
 
     </style>
 """, unsafe_allow_html=True)
+
 
 # -------------------------
 # App Title and Description

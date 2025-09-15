@@ -35,14 +35,14 @@ st.markdown("""
 
     /* Header text styling */
     h1 {
-        color: #4a148c !important;
+        color: white !important;
         font-size: 36px;
         font-weight: 700;
     }
 
     /* Subheader styling */
     .stMarkdown p {
-        color: #4a148c !important;
+        color: white !important;
         font-size: 18px;
     }
 
@@ -55,7 +55,7 @@ st.markdown("""
     }
     .stNumberInput>label {
         font-weight: 500;
-        color: #4a148c !important;
+        color: white !important;
     }
 
     /* Button styling with light gradient */

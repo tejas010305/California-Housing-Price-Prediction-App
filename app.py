@@ -36,7 +36,7 @@ st.markdown("""
 
     /* Header text styling */
     h1 {
-        color: #4a148c !important;
+        color: Black !important;
         font-size: 36px;
         font-weight: 700;
     }

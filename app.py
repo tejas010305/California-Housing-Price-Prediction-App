@@ -3,6 +3,38 @@ import numpy as np
 import pickle
 import gzip
 
+
+
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #f5f5f5;
+        color: #333333;
+    }
+    .css-18e3th9 {
+        padding: 2rem;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .stButton button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .stButton button:hover {
+        background-color: #45a049;
+    }
+    </style>
+    """, unsafe_allow_html=True
+)
+
 # -------------------------
 # Load the Best Model
 # -------------------------

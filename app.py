@@ -80,7 +80,7 @@ st.markdown("""
     .stAlert {
         border-radius: 12px;
         font-size: 18px;
-        color: sky blue !important;
+        color: #skyblue !important;
     }
 
     </style>

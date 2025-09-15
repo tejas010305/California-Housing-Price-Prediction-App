@@ -36,14 +36,14 @@ st.markdown("""
 
     /* Header text styling */
     h1 {
-        color: Black !important;
+        color: White !important;
         font-size: 36px;
         font-weight: 700;
     }
 
     /* Subheader styling */
     .stMarkdown p {
-        color: #333333 !important;
+        color: White !important;
         font-size: 18px;
     }
 

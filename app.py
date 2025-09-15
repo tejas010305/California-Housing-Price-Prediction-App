@@ -3,38 +3,6 @@ import numpy as np
 import pickle
 import gzip
 
-
-
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background-color: #f5f5f5;
-        color: #333333;
-    }
-    .css-18e3th9 {
-        padding: 2rem;
-        border-radius: 10px;
-        background-color: #ffffff;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .stButton button {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 0.5rem 1rem;
-        text-align: center;
-        font-size: 16px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    .stButton button:hover {
-        background-color: #45a049;
-    }
-    </style>
-    """, unsafe_allow_html=True
-)
-
 # -------------------------
 # Load the Best Model
 # -------------------------
@@ -47,23 +15,74 @@ def load_model():
 model = load_model()
 
 # -------------------------
-# App Title
+# Inject Custom CSS for Styling
 # -------------------------
-st.title("🏠 California Housing Price Prediction")
-st.write("Enter the details below to predict the housing price.")
+st.markdown(
+    """
+    <style>
+    /* App background */
+    .stApp {
+        background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+        color: #333333;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    /* Container styling */
+    .css-18e3th9 {
+        background-color: #ffffff;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    /* Input fields styling */
+    .stNumberInput>div>div>input {
+        border: 2px solid #4CAF50;
+        border-radius: 8px;
+        padding: 0.5rem;
+    }
+    /* Button styling */
+    .stButton button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 0.7rem 1.5rem;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .stButton button:hover {
+        background-color: #45a049;
+    }
+    /* Success message styling */
+    .stAlert {
+        border-radius: 10px;
+        font-size: 18px;
+    }
+    </style>
+    """, unsafe_allow_html=True
+)
 
 # -------------------------
-# Input Fields
+# App Title with Style
 # -------------------------
-# List of feature names in the California dataset
+st.markdown("<h1 style='text-align: center; color: #4CAF50;'>🏠 California Housing Price Predictor</h1>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; font-size: 18px; color: #555;'>Enter the details below to get your predicted housing price!</p>", unsafe_allow_html=True)
+
+# -------------------------
+# Input Fields in Two Columns
+# -------------------------
 feature_names = [
     'MedInc', 'HouseAge', 'AveRooms', 'AveBedrms', 'Population', 'AveOccup', 'Latitude', 'Longitude'
 ]
 
+col1, col2 = st.columns(2)
 input_data = []
-for feature in feature_names:
-    value = st.number_input(f"{feature}", format="%.3f")
-    input_data.append(value)
+
+for i, feature in enumerate(feature_names):
+    with col1 if i % 2 == 0 else col2:
+        value = st.number_input(f"{feature}", format="%.3f")
+        input_data.append(value)
 
 # -------------------------
 # Prediction Button

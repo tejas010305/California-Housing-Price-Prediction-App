@@ -49,7 +49,7 @@ st.markdown(
     }
     /* Button styling */
     .stButton button {
-        background-color: #1a237e;
+        background-color: #ff5722;
         color: white;
         border: none;
         padding: 0.7rem 1.5rem;
@@ -60,7 +60,7 @@ st.markdown(
         transition: background-color 0.3s ease;
     }
     .stButton button:hover {
-        background-color: #3949ab;
+        background-color: #e64a19;
     }
     /* Success message styling */
     .stAlert {

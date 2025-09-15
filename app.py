@@ -15,78 +15,88 @@ def load_model():
 model = load_model()
 
 # -------------------------
-# Inject Custom CSS for Styling with Gradient Background
+# Inject Stylish CSS
 # -------------------------
-st.markdown(
-    """
+st.markdown("""
     <style>
-    /* App background with gradient */
+    /* App overall background */
     .stApp {
-        background: linear-gradient(45deg, #ff6ec4, #7873f5);
-        /* Alternative gradients:
-        background: linear-gradient(135deg, #89f7fe, #66a6ff);
-        background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
-        background: radial-gradient(circle at center, #89f7fe, #66a6ff);
-        */
-        color: #333333;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: #ffffff;
+        font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    /* Container styling */
+
+    /* Main container styling */
     .css-18e3th9 {
-        background-color: #ffffff;
+        background-color: rgba(255, 255, 255, 0.95);
         padding: 2rem;
-        border-radius: 15px;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
-    /* Header text */
+
+    /* Header text styling */
     h1 {
-        color: #1a237e !important;
+        color: #4a148c !important;
+        font-size: 36px;
+        font-weight: 700;
     }
-    /* Paragraphs and other texts */
-    p, label, .stMarkdown {
+
+    /* Subheader styling */
+    .stMarkdown p {
         color: #333333 !important;
+        font-size: 18px;
     }
+
     /* Input fields styling */
     .stNumberInput>div>div>input {
-        border: 2px solid #1a237e;
-        border-radius: 8px;
-        padding: 0.5rem;
+        border: 2px solid #4a148c;
+        border-radius: 12px;
+        padding: 0.6rem;
+        font-size: 16px;
     }
+    .stNumberInput>label {
+        font-weight: 500;
+        color: #4a148c !important;
+    }
+
     /* Button styling */
     .stButton button {
-        background-color: #ff5722;
+        background: linear-gradient(45deg, #ff6ec4, #7873f5);
         color: white;
         border: none;
-        padding: 0.7rem 1.5rem;
-        text-align: center;
+        padding: 0.8rem 1.8rem;
         font-size: 18px;
-        border-radius: 10px;
+        font-weight: bold;
+        border-radius: 12px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        transition: all 0.3s ease;
     }
     .stButton button:hover {
-        background-color: #e64a19;
+        background: linear-gradient(45deg, #7873f5, #ff6ec4);
+        transform: scale(1.05);
     }
+
     /* Success message styling */
     .stAlert {
-        border-radius: 10px;
+        border-radius: 12px;
         font-size: 18px;
+        color: #2e7d32 !important;
     }
+
     </style>
-    """, unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
 
 # -------------------------
-# App Title with Style
+# App Title and Description
 # -------------------------
 st.markdown("<h1 style='text-align: center;'>🏠 California Housing Price Predictor</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; font-size: 18px;'>Enter the details below to get your predicted housing price!</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'>Enter the details below to predict the housing price in California.</p>", unsafe_allow_html=True)
 
 # -------------------------
 # Input Fields in Two Columns
 # -------------------------
 feature_names = [
-    'MedInc', 'HouseAge', 'Avg Rooms', 'Avg Bedrooms', 'Population', 'Avg Occupation', 'Latitude', 'Longitude'
+    'Median Income', 'House Age', 'Average Rooms', 'Average Bedrooms', 'Population', 'Average Occupation', 'Latitude', 'Longitude'
 ]
 
 col1, col2 = st.columns(2)

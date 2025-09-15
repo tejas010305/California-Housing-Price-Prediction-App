@@ -15,14 +15,19 @@ def load_model():
 model = load_model()
 
 # -------------------------
-# Inject Custom CSS for Styling
+# Inject Custom CSS for Styling with Gradient Background
 # -------------------------
 st.markdown(
     """
     <style>
-    /* App background */
+    /* App background with gradient */
     .stApp {
-        background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+        background: linear-gradient(45deg, #ff6ec4, #7873f5);
+        /* Alternative gradients:
+        background: linear-gradient(135deg, #89f7fe, #66a6ff);
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
+        background: radial-gradient(circle at center, #89f7fe, #66a6ff);
+        */
         color: #333333;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }

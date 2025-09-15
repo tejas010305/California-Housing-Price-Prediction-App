@@ -7,7 +7,7 @@ A simple web application that predicts California housing prices using machine l
 ## 🔗 Live Demo
 
 Access the app here:  
-➡️[ [California Housing Price Predictor](https://all-regresors-pratik-pranav.streamlit.app/)](https://california-housing-price-prediction-app.streamlit.app/)
+➡️(https://california-housing-price-prediction-app.streamlit.app/)
 
 ---
 

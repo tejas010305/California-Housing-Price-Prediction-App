@@ -33,15 +33,23 @@ st.markdown(
         border-radius: 15px;
         box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
+    /* Header text */
+    h1 {
+        color: #1a237e !important;
+    }
+    /* Paragraphs and other texts */
+    p, label, .stMarkdown {
+        color: #333333 !important;
+    }
     /* Input fields styling */
     .stNumberInput>div>div>input {
-        border: 2px solid #4CAF50;
+        border: 2px solid #1a237e;
         border-radius: 8px;
         padding: 0.5rem;
     }
     /* Button styling */
     .stButton button {
-        background-color: #4CAF50;
+        background-color: #1a237e;
         color: white;
         border: none;
         padding: 0.7rem 1.5rem;
@@ -52,7 +60,7 @@ st.markdown(
         transition: background-color 0.3s ease;
     }
     .stButton button:hover {
-        background-color: #45a049;
+        background-color: #3949ab;
     }
     /* Success message styling */
     .stAlert {
@@ -66,8 +74,8 @@ st.markdown(
 # -------------------------
 # App Title with Style
 # -------------------------
-st.markdown("<h1 style='text-align: center; color: #4CAF50;'>🏠 California Housing Price Predictor</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; font-size: 18px; color: #555;'>Enter the details below to get your predicted housing price!</p>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>🏠 California Housing Price Predictor</h1>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; font-size: 18px;'>Enter the details below to get your predicted housing price!</p>", unsafe_allow_html=True)
 
 # -------------------------
 # Input Fields in Two Columns

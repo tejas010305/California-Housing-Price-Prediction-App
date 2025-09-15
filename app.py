@@ -56,7 +56,7 @@ st.markdown("""
     }
     .stNumberInput>label {
         font-weight: 500;
-        color: #4a148c !important;
+        color: White !important;
     }
 
     /* Button styling */

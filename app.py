@@ -81,7 +81,7 @@ st.markdown("<p style='text-align: center; font-size: 18px;'>Enter the details b
 # Input Fields in Two Columns
 # -------------------------
 feature_names = [
-    'MedInc', 'HouseAge', 'AveRooms', 'AveBedrms', 'Population', 'AveOccup', 'Latitude', 'Longitude'
+    'MedInc', 'HouseAge', 'Avg Rooms', 'Avg Bedrooms', 'Population', 'Avg Occupation', 'Latitude', 'Longitude'
 ]
 
 col1, col2 = st.columns(2)

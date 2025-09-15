@@ -22,7 +22,7 @@ st.markdown("""
     /* App overall background with light gradient */
     .stApp {
         background: linear-gradient(135deg, #e0f7fa, #e1bee7);
-        color: #333333;
+        color: black;
         font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
